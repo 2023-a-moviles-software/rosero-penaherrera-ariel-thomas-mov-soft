@@ -48,6 +48,18 @@ fun main(args: Array<String>) {
     calcularSueldo(10.00, 12.00, 20.00)
     calcularSueldo(10.00,bonoEspecial = 20.00) //Named Parameters
     calcularSueldo(bonoEspecial = 20.00, sueldo = 10.00, tasa = 14.00)
+    val sumaUno = Suma(1,1)
+    val sumaDos = Suma(null, 1)
+    val sumaTres = Suma(1,null)
+    val sumaCuatro = Suma(null,null)
+    sumaUno.sumar()
+    sumaDos.sumar()
+    sumaTres.sumar()
+    sumaCuatro.sumar()
+    println(Suma.pi)
+    println(Suma.elevarAlCuadrado(2))
+    println(Suma.historialSumas)
+    
 }
 
 abstract class NumerosJava{
@@ -83,6 +95,70 @@ abstract class Numeros( //Constructor Primario
         println("Inicializando")
     }
 }
+
+class Suma( //Constructor primario
+    unoParametro: Int, // Parametro
+    dosParametro: Int, // Parametro
+): Numeros(unoParametro, dosParametro){ //Extendiendo y mandando los parametro (superconstructor)
+    init{
+        //Bloque codigo constructor primario
+        this.numeroUno
+        this.numeroDos
+    }
+
+    constructor( //Segundo constructor
+        uno: Int?, //Parametros
+        dos: Int //Parametros
+    ):this(
+        if(uno == null) 0 else uno,
+        dos
+    )
+
+    constructor( //Tercer constructor
+        uno: Int, //Parametros
+        dos: Int? //Parametros
+    ):this(
+        uno,
+        if(dos == null) 0 else dos
+    )
+
+    constructor( //Cuarto constructor
+        uno: Int?,
+        dos: Int?
+    ):this(
+        if(uno == null) 0 else uno,
+        if(dos == null) 0 else dos
+    )
+
+    public fun sumar(): Int{
+        val total = numeroUno + numeroDos
+        agregarHistorial(total) //this.agregarHistorial(total)
+        return total
+    }
+
+    companion object{ //Atributos y metodos "Compartidos" Singletons o static de esta clase
+        //Todas las instancias de esta clase comparten estos atributos y metodos
+        //dentro del companion Ojbect
+        val pi = 3.14
+        fun elevarAlCuadrado(num: Int): Int{
+            return num * num
+        }
+        val historialSumas = ArrayList<Int>()
+
+        fun agregarHistorial(valorNuevaSuma: Int){
+            historialSumas.add(valorNuevaSuma)
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
 
 
 //Void -> unit
