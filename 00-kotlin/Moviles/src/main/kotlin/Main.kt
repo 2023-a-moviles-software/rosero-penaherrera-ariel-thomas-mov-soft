@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
     //Tipos de Arreglos
 
     //Arreglo Estáticos
-    val arregloEstatico: Array<Int> = aarayOf<Int>(1,2,3)
+    val arregloEstatico: Array<Int> = arrayOf<Int>(1,2,3)
     println(arregloEstatico)
 
     //Arreglo Dinámico
@@ -108,7 +108,7 @@ fun main(args: Array<String>) {
     val respuestaFilter: List<Int> = arregloDinamico
         .filter { valorActual: Int ->
             val mayoresACinco: Boolean = valorActual > 5 //Expresion condicion
-            retuirn@filter mayoresACinco
+            return@filter mayoresACinco
         }
     val respuestaFilterDos = arregloDinamico.filter { it <= 5}
     println(respuestaFilter)
