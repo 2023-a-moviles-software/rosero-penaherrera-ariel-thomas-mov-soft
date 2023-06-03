@@ -19,12 +19,12 @@ fun main(){
             (1) -> {
                 flag = true
                 System.out.println("Has seleccionado Universidades");
-                //abrirMenuAlbum()
+                abrirMenuUniversidad()
             }
             (2) -> {
                 flag = true
                 System.out.println("Has seleccionado Facultades");
-                //abrirMenuCancion()
+                abrirMenuFacultad()
             }
             else -> println("Opción no válida")
         }

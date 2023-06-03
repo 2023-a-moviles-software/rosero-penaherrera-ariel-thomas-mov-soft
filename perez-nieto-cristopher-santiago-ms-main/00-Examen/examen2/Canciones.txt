@@ -1,0 +1,13 @@
+1,2020-05-10,Parce,2.0,true
+2,2022-02-26,Me Porto Bonito,3.0,true
+3,2020-06-02,Bichota,3.0,true
+4,2020-01-01,La Zona,2.0,true
+5,2022-02-26,Titi Me Pregunto,3.0,true
+6,2022-02-26,Moscow Mule,2.5,true
+7,2022-02-26,Despues de la Playa,3.5,true
+8,2022-02-26,Efecto,3.0,true
+9,2022-02-26,Neverita,3.0,true
+10,2020-01-01,Yo Hago Lo Que Me Da La Gana,2.0,true
+11,2020-05-15,Morado,3.0,false
+12,2019-02-14,Estamos Bien,4.0,true
+13,2015-02-02,La Bicicleta,4.0,false
