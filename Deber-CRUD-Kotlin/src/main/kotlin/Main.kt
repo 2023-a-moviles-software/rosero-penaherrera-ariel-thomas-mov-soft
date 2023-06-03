@@ -138,8 +138,7 @@ fun leerUniversidades(){
         val file = File("universidades.txt")
         val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
         reader.lines().forEach{
-            var miListaFacultad = mutableListOf<Facultad>()
-            //miListaCanciones.clear()
+            var miListaUniversidad = mutableListOf<Universidad>()
             val tokens = StringTokenizer(it, ",")
             var dato: String = tokens.nextToken()
             val nuevaUniversidad = Universidad()
@@ -157,9 +156,9 @@ fun leerUniversidades(){
             // aquí se vuelve a realizar una búsqueda por tokens
             while(tokens.hasMoreTokens()){
                 dato = tokens.nextToken()
-                miListaFacultad.add(obtenerFacultadPorId(dato.toInt()))
+                miListaUniversidad.add(obtenerFacultadPorId(dato.toInt()))
             }
-            nuevaUniversidad.listaFacultades = miListaFacultad
+            nuevaUniversidad.listaFacultades = miListaUniversidad
             listaUniversidad.add(nuevaUniversidad)
         }
     } catch (e: IOException) {
