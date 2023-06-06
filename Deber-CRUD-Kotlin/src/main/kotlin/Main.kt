@@ -187,7 +187,7 @@ fun agregarListaFacultades(): MutableList<Facultad>{
     return listaFacultadesNuevas
 }
 
-fun obtenerFacultadPorId(id: Int): Facultad{
+fun obtenerFacultadPorId(id: Int): Universidad {
     val listaFacultades = mutableListOf<Facultad>()
     var facultad = Facultad()
     try {
