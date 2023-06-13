@@ -111,8 +111,8 @@ fun crearUniversidad(){
     miUniversidad.esPublica = readln() == "V"
     print("Escriba el promedio de notas de la universidad: ")
     miUniversidad.promedioNotas = readln().toFloat()
-    print("Escriba el número de estudiantes de la universidad: ")
-    miUniversidad.numeroEstudiantes = readln().toInt()
+    print("Escriba el número de estudiantes de la universidad:")
+    miUniversidad.numeroEstudiantes = readln().trim().toInt()
     miUniversidad.listaFacultades = agregarListaFacultades()
     try {
         archivo = File("universidades.txt")
@@ -138,7 +138,7 @@ fun leerUniversidades(){
         val file = File("universidades.txt")
         val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
         reader.lines().forEach{
-            var miListaUniversidad = mutableListOf<Universidad>()
+            var miListaFacultades = mutableListOf<Facultad>()
             val tokens = StringTokenizer(it, ",")
             var dato: String = tokens.nextToken()
             val nuevaUniversidad = Universidad()
@@ -152,20 +152,20 @@ fun leerUniversidades(){
             dato = tokens.nextToken()
             nuevaUniversidad.promedioNotas = dato.toFloat()
             dato = tokens.nextToken()
-            nuevaUniversidad.numeroEstudiantes = dato.toInt()
+            nuevaUniversidad.numeroEstudiantes = dato.trim().toInt()
             // aquí se vuelve a realizar una búsqueda por tokens
             while(tokens.hasMoreTokens()){
                 dato = tokens.nextToken()
-                miListaUniversidad.add(obtenerFacultadPorId(dato.toInt()))
+                miListaFacultades.add(obtenerFacultadPorId(dato.toInt()))
             }
-            nuevaUniversidad.listaFacultades = miListaUniversidad
+            nuevaUniversidad.listaFacultades = miListaFacultades
             listaUniversidad.add(nuevaUniversidad)
         }
     } catch (e: IOException) {
         e.printStackTrace()
     }
     listaUniversidad.forEach{
-        println(it.toString())
+        println(it.obtenerAtributos())
     }
 }
 
@@ -187,7 +187,7 @@ fun agregarListaFacultades(): MutableList<Facultad>{
     return listaFacultadesNuevas
 }
 
-fun obtenerFacultadPorId(id: Int): Universidad {
+fun obtenerFacultadPorId(id: Int): Facultad {
     val listaFacultades = mutableListOf<Facultad>()
     var facultad = Facultad()
     try {
@@ -243,7 +243,7 @@ fun actualizarUniversidad(){
         dato = tokens.nextToken()
         nuevaUniversidad.promedioNotas = dato.toFloat()
         dato = tokens.nextToken()
-        nuevaUniversidad.numeroEstudiantes = dato.toInt()
+        nuevaUniversidad.numeroEstudiantes = dato.trim().toInt()
         // aquí se vuelve a realizar una búsqueda por tokens
         while(tokens.hasMoreTokens()){
             dato = tokens.nextToken()
