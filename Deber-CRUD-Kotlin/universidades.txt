@@ -1,4 +1,4 @@
-1,1869-08-27,Escuela Poli Nacional,true,90.35,10000
-2,1620-10-05,Universidad Central del Ecuador,true,89.65,50000
-3,1946-11-04,PUCE,false,88.03, 26299
-4,1946-11-04,Universidad Católica del Ecuador,false,77.88, 20072, ,0,0
+1,1889-08-27,EPN,true,99.89,5080,
+2,1620-10-05,Universidad Central del Ecuador,true,89.65,50000,
+4,1946-11-04,Universidad Catolica del Ecuador,false,77.88,20072,
+5,1999-10-27,UTA,false,45.67,895,

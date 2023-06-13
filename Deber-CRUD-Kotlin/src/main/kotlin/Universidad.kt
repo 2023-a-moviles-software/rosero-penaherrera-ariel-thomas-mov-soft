@@ -40,6 +40,6 @@ class Universidad {
         listaFacultades.forEach{
             idsFacultades += ","+it.id_f.toString()
         }
-        return "$id_u,$fechaCreacion,$nombre,$esPublica,$promedioNotas, $numeroEstudiantes, $idsFacultades"
+        return "$id_u,$fechaCreacion,$nombre,$esPublica,$promedioNotas,$numeroEstudiantes,$idsFacultades"
     }
 }
