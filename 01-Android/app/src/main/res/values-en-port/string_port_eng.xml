@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="idioma_texto">ENGLISH PORT</string>
+    <color name="color_texto">#AB55E0</color>
+    <color name="color_fondo">#CAE055</color>
 </resources>

@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="idioma_texto">ENGLISH LAND</string>
+    <color name="color_texto">#3D6BE0</color>
+    <color name="color_fondo">#E0B13D</color>
 </resources>
