@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:text="Buscar"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/btn_crear_bdd"
         tools:layout_editor_absoluteY="342dp" />
 
     <Button
@@ -21,9 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Eliminar"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_crear_bdd"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear_bdd"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crear_bdd" />
 
     <EditText
         android:id="@+id/input_id"
@@ -32,12 +32,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Ingrese ID"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/input_nombre"
+        app:layout_constraintStart_toStartOf="@+id/input_nombre"
         tools:layout_editor_absoluteY="75dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/input_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,12 +55,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Ingrese Descripcion"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_crear_bdd"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crear_bdd"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear_bdd" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_crear_bdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Crear"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="Actualizar"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btn_crear_bdd"
         tools:layout_editor_absoluteY="342dp" />
 
     <TextView
