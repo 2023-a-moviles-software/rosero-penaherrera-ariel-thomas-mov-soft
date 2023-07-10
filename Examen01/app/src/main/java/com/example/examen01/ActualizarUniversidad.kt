@@ -3,6 +3,7 @@ package com.example.examen01
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
@@ -23,6 +24,7 @@ class ActualizarUniversidad : AppCompatActivity() {
         val etNombreUniversidadActualizado = findViewById<EditText>(R.id.etNombreUniversidadActualizado)
         val etEsPublicaActualizado = findViewById<EditText>(R.id.etEsPublicaActualizado)
         val etPromedioNotasActualizado = findViewById<EditText>(R.id.etPromedioNotasActualizado)
+        val btnActualizarUniversidad = findViewById<Button>(R.id.btnActualizarUniversidad)
 
         if(docRef != null){
             docRef.get().addOnSuccessListener { documentSnapshot ->
