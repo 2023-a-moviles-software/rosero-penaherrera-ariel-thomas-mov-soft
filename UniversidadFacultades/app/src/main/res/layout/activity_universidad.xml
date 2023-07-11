@@ -8,13 +8,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFacultades"
-        android:layout_width="409dp"
-        android:layout_height="521dp"
+        android:layout_width="370dp"
+        android:layout_height="456dp"
         android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.492" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
