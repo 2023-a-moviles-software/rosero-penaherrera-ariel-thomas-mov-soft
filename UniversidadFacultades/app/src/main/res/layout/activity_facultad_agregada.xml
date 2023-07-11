@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FacultadAgregada">
+
+    <EditText
+        android:id="@+id/tvNombreFacultad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/tvNumeroCarreras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="#Carreras"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNombreUniversidad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreUniversidad"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreUniversidad" />
+
+    <EditText
+        android:id="@+id/tvNumeroEstudiantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="#Estudiantes"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumeroCarreras"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNumeroCarreras"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroCarreras" />
+
+    <EditText
+        android:id="@+id/tvIDnuevaFacultad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="ID nueva facultad"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumeroDocentes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNumeroDocentes"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroDocentes" />
+
+    <EditText
+        android:id="@+id/tvNombreUniversidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Universidad"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNombreFacultad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreFacultad"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreFacultad" />
+
+    <EditText
+        android:id="@+id/tvNumeroDocentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="#Docentes"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumeroEstudiantes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNumeroEstudiantes"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroEstudiantes" />
+
+    <Button
+        android:id="@+id/btn_agregarNuevaFacultad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Agregar"
+        app:layout_constraintEnd_toEndOf="@+id/tvIDnuevaFacultad"
+        app:layout_constraintStart_toStartOf="@+id/tvIDnuevaFacultad"
+        app:layout_constraintTop_toBottomOf="@+id/tvIDnuevaFacultad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
