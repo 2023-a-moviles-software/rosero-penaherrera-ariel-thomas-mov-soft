@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/cupones"
+        android:icon="@drawable/ic_baseline_discount_24"
+        android:title="Cupones" />
+
+    <item
+        android:id="@+id/carrito"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="Carro de compra" />
+
+    <item
+        android:id="@+id/usuario"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="Usuario"
+        app:showAsAction="always"
+        />
+
+
+</menu>
