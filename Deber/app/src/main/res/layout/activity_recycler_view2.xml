@@ -12,25 +12,28 @@
       layout="@layout/titulo_usuario"
       android:layout_width="match_parent"
       android:layout_height="672dp"
-      android:paddingBottom="20dp" />
+      android:paddingBottom="20dp"
+      tools:layout_editor_absoluteX="0dp"
+      tools:layout_editor_absoluteY="-2dp" />
 
   <include
       layout="@layout/recycler_usuario"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_width="411dp"
+      android:layout_height="504dp"
       app:layout_constraintBottom_toBottomOf="@+id/include2"
       app:layout_constraintTop_toTopOf="@+id/include"
-      app:layout_constraintVertical_bias="0.229"
-      tools:layout_editor_absoluteX="-16dp" />
+      app:layout_constraintVertical_bias="0.565"
+      tools:layout_editor_absoluteX="0dp" />
 
   <include
       android:id="@+id/include2"
       layout="@layout/tool_bar_bottom"
-      android:layout_width="411dp"
-      android:layout_height="492dp"
+      android:layout_width="417dp"
+      android:layout_height="573dp"
       android:translationY="45dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.898"
       tools:layout_editor_absoluteX="0dp" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
