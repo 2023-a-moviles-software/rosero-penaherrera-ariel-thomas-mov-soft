@@ -23,11 +23,11 @@
         tools:layout_editor_absoluteY="53dp" />
 
     <Button
-        android:id="@+id/btn_fs_datos_odoc"
+        android:id="@+id/btn_fs_odoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DOC"
-        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteX="279dp"
         tools:layout_editor_absoluteY="53dp" />
 
     <Button
