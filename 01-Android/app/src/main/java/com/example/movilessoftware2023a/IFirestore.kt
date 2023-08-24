@@ -6,14 +6,16 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.Date
 
 class IFirestore : AppCompatActivity() {
 
-    val query: Query? = null
+    var query: Query? = null
     val arreglo: ArrayList<ICities> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +49,53 @@ class IFirestore : AppCompatActivity() {
         //Eliminar
         val botonEliminar = findViewById<Button>(R.id.btn_fs_eliminar)
         botonEliminar.setOnClickListener { eliminar() }
+        //Empezar a paginar
+        val botonEmpezarPaginar = findViewById<Button>(R.id.btn_fs_epaginar)
+        botonEmpezarPaginar.setOnClickListener { query = null; consultarCiudades(adaptador) }
+        //Paginar
+        val botonpaginar = findViewById<Button>(R.id.btn_fs_paginar)
+        botonpaginar.setOnClickListener { consultarCiudades(adaptador) }
+    }
+
+    fun consultarCiudades(
+        adaptador: ArrayAdapter<ICities>
+    ){
+        val db = Firebase.firestore
+        val citiesRef = db.collection("cities")
+            .orderBy("population")
+            .limit(1)
+        var tarea: Task<QuerySnapshot>? = null
+        if(query == null){
+            limpiarArreglo()
+            adaptador.notifyDataSetChanged()
+            tarea = citiesRef.get()
+        } else {
+            tarea = query!!.get()
+        }
+        if(tarea != null){
+            tarea
+                .addOnSuccessListener {
+                    documentSnapshots ->
+                    guardarQuery(documentSnapshots, citiesRef)
+                    for(ciudad in documentSnapshots){
+                        anadirAArregloCiudad(ciudad)
+                    }
+                    adaptador.notifyDataSetChanged()
+                }
+                .addOnFailureListener{}
+        }
+    }
+
+    fun guardarQuery(
+        documentSnapshot: QuerySnapshot,
+        refCities: Query
+    ){
+        if(documentSnapshot.size() > 0){
+            val ultimoDocumento = documentSnapshot
+                .documents[documentSnapshot.size() - 1]
+            query = refCities
+                .startAfter(ultimoDocumento)
+        }
     }
 
     fun eliminar(){
